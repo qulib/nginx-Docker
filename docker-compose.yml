@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  web:
+    image: nginx
+    volumes:
+      - "./data:/var/lib/mysql"
+      - "./data:/usr/share/nginx/html"
+    ports:
+      - "80:80"
+
+volumes:
+  data:
